@@ -1,0 +1,285 @@
+/* Importar Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+
+/* Reset básico para estilos por defecto */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #f9f9f9;
+    color: #5a5a5a;
+    line-height: 1.6;
+    padding-top: 100px; /* Ajusta este valor según la altura de tu encabezado */
+    scroll-padding-top: 100px; 
+}
+
+header {
+    background: #1a1a1a;
+    color: #fff;
+    padding: 20px 0;
+    border-bottom: 5px solid #f9b625;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.8em;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    display: inline-block;
+    margin: 0 10px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 5px 10px;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    transform: scale(1.1); /* Agrandar ligeramente los enlaces */
+}
+
+nav ul li a:focus {
+    color: #f9b625;
+}
+
+section {
+    background: #fff;
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    
+}
+
+
+section h2 {
+    color: #333;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+article {
+    position: relative;
+    background-color: #f9b625;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+/* Estilos para el título de la sección */
+.section-title h2 {
+    text-align: center; /* Esto centrará el título "Proyectos" */
+}
+
+
+.project-description {
+    padding-right: 120px;
+    margin-bottom: 25px; 
+}
+
+.project-tech {
+    position: relative;
+    bottom: 15px;
+    left: 15px;
+    right: 150px; /* Asegúrate de que este valor sea igual al ancho de .project-image para evitar la superposición */
+    clear: both; /* Esto evitará que los elementos floten sobre esta sección */
+    padding-top: 10px;
+}
+
+.project-tech span {
+    display: inline-block;
+    background: #ddd;
+    color: #333;
+    padding: 5px;
+    margin-right: 5px;
+    border-radius: 3px;
+    margin-top: 10px; /* Añadir un espacio arriba de las etiquetas de tecnología si es necesario */
+}
+
+.project-image {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 150px; /* Ajusta este valor según sea necesario */
+    
+}
+
+
+.project-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+footer {
+    background-color: #1a1a1a;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    margin: 0;
+}
+
+#contacto {
+    background: #fff;
+    padding: 30px;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.contact-info {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.contact-info li {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.contact-icon {
+    width: 24px;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+section#sobre-mi {
+    background: #fff;
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    text-align: center; /* Centrar el texto */
+}
+
+section#sobre-mi h2 {
+    color: #333;
+    font-size: 2em; /* Aumentar el tamaño del texto */
+    margin-bottom: 10px;
+}
+
+section#sobre-mi .highlight {
+    color: #f9b625; /* Un color para resaltar tu nombre */
+    font-weight: bold; /* Hacer el nombre más audaz */
+}
+
+section#sobre-mi p {
+    font-size: 1.2em; /* Hacer el texto del párrafo un poco más grande */
+    margin-top: 20px;
+}
+
+/* Estilos para la sección de Tecnologías */
+#tecnologias {
+    text-align: center;
+    padding: 20px;
+}
+
+.tech-logos img {
+    margin: 10px;
+    height: 50px; /* Ajusta el tamaño según sea necesario */
+}
+
+/* Estilos para la sección de Colaboración */
+#colaboracion {
+    background-color: #f9f9f9;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.contact-button {
+    display: inline-block;
+    background-color: #f9b625;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact-button:hover {
+    background-color: #e5a021; /* Un color ligeramente más oscuro al pasar el mouse */
+}
+
+@media (max-width: 768px) {
+    .project-description {
+        padding-right: 0;
+    }
+
+    .project-description, .project-tech, .project-image {
+        position: relative;
+        width: auto; /* Asegúrate de que cada elemento se ajuste al ancho de la pantalla */
+    }
+
+    .project-tech {
+        position: static;
+        padding-top: 20px;
+    }
+
+    .project-image {
+        position: static;
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    header, nav ul li, footer {
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+        margin-bottom: 5px;
+    }
+
+    section {
+        margin: 10px;
+        padding: 15px;
+    }
+
+    footer {
+        position: relative;
+    }
+}
