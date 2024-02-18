@@ -246,7 +246,17 @@ section#sobre-mi p {
     .project-description, .project-tech, .project-image {
         position: relative;
         width: auto; /* Asegúrate de que cada elemento se ajuste al ancho de la pantalla */
+        width: 100%;
+        padding: 10px;
+        box-sizing: border-box;
     }
+
+    .project-tech, .project-image {
+        /* Elimina la posición absoluta para dispositivos móviles */
+        position: static;
+        margin-top: 10px;
+    }
+
 
     .project-tech {
         position: static;
@@ -281,5 +291,13 @@ section#sobre-mi p {
 
     footer {
         position: relative;
+    }
+
+    header h1, nav ul li a {
+        font-size: 14px; /* Reducir el tamaño de la fuente para pantallas pequeñas */
+    }
+
+    body {
+        padding-top: 60px; /* Ajusta el padding superior si reduces la altura del encabezado en móviles */
     }
 }
