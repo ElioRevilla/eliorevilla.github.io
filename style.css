@@ -74,7 +74,6 @@ section {
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     max-width: 800px;
-    
 }
 
 
@@ -85,58 +84,73 @@ section h2 {
 }
 
 article {
-    position: relative;
+    display: flex;
+    align-items: flex-start; /* Alinea los elementos al inicio */
+    justify-content: space-between; /* Separa el contenido y la imagen */
     background-color: #f9b625;
     padding: 15px;
     border-radius: 8px;
     margin-bottom: 20px;
-    overflow: hidden;
 }
+
+
+/* Contenedor para la descripción y las tecnologías */
+.project-info {
+    display: flex;
+    flex-direction: column; /* Organiza la descripción y las tecnologías verticalmente */
+    flex: 1; /* Toma todo el espacio disponible excepto el de la imagen */
+}
+
 
 /* Estilos para el título de la sección */
 .section-title h2 {
     text-align: center; /* Esto centrará el título "Proyectos" */
 }
 
-
-.project-description {
-    padding-right: 120px;
-    margin-bottom: 25px; 
+.project-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
 }
 
+.project-description {
+    /* Espacio debajo de la descripción para las tecnologías */
+    margin-bottom: 10px;
+}
+
+
 .project-tech {
-    position: relative;
-    bottom: 15px;
-    left: 15px;
-    right: 150px; /* Asegúrate de que este valor sea igual al ancho de .project-image para evitar la superposición */
-    clear: both; /* Esto evitará que los elementos floten sobre esta sección */
-    padding-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
 .project-tech span {
-    display: inline-block;
     background: #ddd;
     color: #333;
     padding: 5px;
-    margin-right: 5px;
     border-radius: 3px;
-    margin-top: 10px; /* Añadir un espacio arriba de las etiquetas de tecnología si es necesario */
 }
 
+/* Contenedor para la descripción y la imagen */
+.project-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Estilos para la imagen del proyecto */
 .project-image {
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    width: 150px; /* Ajusta este valor según sea necesario */
-    
+    flex-shrink: 0; /* Previene que la imagen se encoja */
+    width: 150px; /* Ancho fijo para la imagen */
+    text-align: right; /* Alinea la imagen a la derecha */
 }
-
 
 .project-image img {
     width: 100%;
     height: auto;
     border-radius: 5px;
 }
+
 
 footer {
     background-color: #1a1a1a;
@@ -239,16 +253,36 @@ section#sobre-mi p {
 }
 
 @media (max-width: 768px) {
+    article {
+        flex-direction: column;
+        align-items: center; /* Centra los elementos en dispositivos móviles */
+    }
+
     .project-description {
-        padding-right: 0;
+         width: 100%;
+    }
+
+    .project-info {
+        width: 100%; /* Asegurarse de que el contenedor ocupe el ancho completo */
+    }
+
+    .project-info {
+        align-items: center; /* Centra la descripción y las tecnologías */
     }
 
     .project-description, .project-tech, .project-image {
         position: relative;
         width: auto; /* Asegúrate de que cada elemento se ajuste al ancho de la pantalla */
-        width: 100%;
+        
         padding: 10px;
+        flex-basis: 100%;
         box-sizing: border-box;
+        text-align: center; 
+    }
+
+    .project-description, .project-tech {
+        flex: 1; /* Esto asigna a ambos elementos la capacidad de crecer y ocupar el espacio disponible */
+        padding-right: 15px; /* Ajusta según sea necesario */
     }
 
     .project-tech, .project-image {
@@ -258,15 +292,14 @@ section#sobre-mi p {
     }
 
 
-    .project-tech {
-        position: static;
-        padding-top: 20px;
-    }
-
     .project-image {
-        position: static;
-        width: 100%;
-        margin-top: 20px;
+        order: -1; /* Coloca la imagen arriba del contenido */
+        width: 80%; /* Reduce el ancho de la imagen en dispositivos móviles */
+        margin-bottom: 20px; /* Espacio debajo de la imagen */
+    }
+    
+    .project-tech {
+        justify-content: center;
     }
 
     header, nav ul li, footer {
