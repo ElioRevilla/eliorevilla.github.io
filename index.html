@@ -1,288 +1,903 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portafolio de Elio Revilla Pérez</title>
-    <link rel="stylesheet" href="style.css">
+    <meta charset="utf-8">
+    <title>Portfolio Elio Revilla</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free HTML Templates" name="keywords">
+    <meta content="Free HTML Templates" name="description">
+
+    <!-- Favicon -->
+    <!-- <link href="img/favicon.ico" rel="icon"> -->
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet"> 
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
 </head>
-<body>
-    <header>
-        <h1>SINCH</h1>
-        <nav>
-            <ul>
-                <li><a href="#sobre-mi">Sobre mí</a></li>
-                <li><a href="#proyectos">Proyectos</a></li>
-                <li><a href="#tecnologias">Tecnologías</a></li>
-                <li><a href="#colaboracion">¿Creamos algo juntos?</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <section id="sobre-mi">
-        <h2>Hola! Soy <span class="highlight">Elio Revilla!</span></h2>
-        <p>Ingeniero electrónico apasionado por la ciencia de datos, Inteligencia Artificial e IIoT, con experiencia en proyectos de IA y análisis de datos en ambientes industriales.</p>
-    </section>
-    
-
-    <section id="proyectos">
-        <div class="section-title">
-            <h2>Proyectos</h2>
+<body data-spy="scroll" data-target=".navbar" data-offset="51">
+    <!-- Navbar Start -->
+    <nav class="navbar fixed-top shadow-sm navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-lg-5">
+        <a href="index.html" class="navbar-brand ml-lg-3">
+            <h1 class="m-0 display-5"><span class="text-primary">Portafolio</span>Elio</h1>
+        </a>
+        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse px-lg-3" id="navbarCollapse">
+            <div class="navbar-nav m-auto py-0">
+                <a href="#home" class="nav-item nav-link active en">Home</a>
+                <a href="#home" class="nav-item nav-link es" style="display:none;">Inicio</a>
+                <a href="#about" class="nav-item nav-link en">About</a>
+                <a href="#about" class="nav-item nav-link es" style="display:none;">Sobre mí</a>
+                <!-- <a href="#qualification" class="nav-item nav-link en">Quality</a>
+                <a href="#qualification" class="nav-item nav-link es" style="display:none;">Calidad</a>-->
+                <a href="#skill" class="nav-item nav-link en">Skill</a>
+                <a href="#skill" class="nav-item nav-link es" style="display:none;">Habilidades</a>
+                <a href="#projects" class="nav-item nav-link en">Proyects</a>
+                <a href="#projects" class="nav-item nav-link es" style="display:none;">Proyectos</a>
+                <!-- <a href="#portfolio" class="nav-item nav-link en">Portfolio</a>
+                <a href="#portfolio" class="nav-item nav-link es" style="display:none;">Portafolio</a>-->
+                <!--  <a href="#testimonial" class="nav-item nav-link en">Review</a>
+                <a href="#testimonial" class="nav-item nav-link es" style="display:none;">Reseñas</a>-->
+                <!--<a href="#blog" class="nav-item nav-link en">Blog</a>
+                <a href="#blog" class="nav-item nav-link es" style="display:none;">Blog</a>-->
+                <a href="#contact" class="nav-item nav-link en">Contact</a>
+                <a href="#contact" class="nav-item nav-link es" style="display:none;">Contacto</a>
+            </div>
+            <div>
+                <a href="#" onclick="showEnglish()" class="nav-link d-inline">EN</a>
+                <a href="#" onclick="showSpanish()" class="nav-link d-inline">ES</a>
+            </div>
         </div>
-    
-        <article>
-            <div class="project-description">
-                <h3>Plataforma Inteligente de Ciberseguridad - Generadora Metropolitana</h3>
-                <p>Desarrollo de una plataforma de ciberseguridad usando LLM para tener una interacción más natural con el usuario cuando haga consultas sobre eventos presentados.</p>
-                <a href="https://github.com/ElioRevilla/llm-models-deploy" target="_blank" rel="noopener noreferrer">Github</a>
-            </div>
-            <div class="project-tech">
-                <span>LLM</span>
-                <span>Docker</span>
-                <span>AZURE</span>
-                <span>Open AI</span>
-                <span>GPT-3.5-Turbo</span>
-                <span>Pinecone</span>
-                <span>LangChain</span>
-                <span>LLMOps</span>
-                <span>Flask</span>
-            </div>
-            <div class="project-image">
-                <img src="images/proyectos/ciber-icon.png" alt="Imagen tiro con arco">
-            </div>
-
-        </article>
-
-        <article>
-            <div class="project-description">
-                <h3>Modelo de machine learning para calcular la existencia de accidentes - Mutual de Seguridad.</h3>
-                <p>Generación y estandarización de la base de datos para la generación de modelos predictivo para calcular denuncias y accidentes en instituciones socias de Mutual de Seguridad.</p>
-                
-            </div>
-            <div class="project-tech">                
-                <span>Transformers</span>
-                <span>GCP</span>
-                <span>Flask</span>
-                <span>Power BI</span>
-            </div>
-            <div class="project-image">
-                <img src="images/mutual.png" alt="mutual">
-            </div>
-
-        </article>
-
-        <article>
-            <div class="project-description">
-                <h3>Chatbot de Ciberseguridad - BANCO BCI</h3>
-                <p> Desarrollo de un Chatbot de Ciberseguridad basado en Procesamiento de Lenguaje Natural para Colaboradores BCI</p>
-                
-            </div>
-            <div class="project-tech">     
-                <span>GCP</span>
-                <span>Dialogflow</span>
-                <span>Vertex AI</span>
-                <span>Gemini</span>
-                <span>Flask</span>
-                <span>Open AI</span>
-                
-            </div>
-            <div class="project-image">
-                <img src="images/chatbot.png" alt="mutual">
-            </div>
-
-        </article>
-        
-        <article>
-            <div class="project-description">
-                <h3>Detección de caída de GETs en minería</h3>
-                <p>Desarrollo de un modelo de CNN para detectar la caída de dientes de palas y cargadores en el sector minero, mejorando la seguridad y eficiencia operativa.</p>
-                <!--<a href="#">Leer más</a>-->
-            </div>
-            <div class="project-tech">
-                <span>CNN</span>
-                <span>Python</span>
-                <span>TensorFlow</span>
-                <span>TensorRT</span>
-                <span>Jetson-NVIDIA</span>
-            </div>
-            <div class="project-image">
-                <img src="images/proyectos/loader-icon.png" alt="Imagen del proyecto de minería">
-            </div>
-        </article>
-    
-        <article>
-            <div class="project-description">
-                <h3>Clasificación de tamaño de anchovetas</h3>
-                <p>Implementación de un sistema de visión computarizada basado en CNN y segmentación para clasificar anchovetas por tamaño en cintas transportadoras de desembarque, optimizando el proceso de selección.</p>
-                <!--<a href="#">Leer más</a>-->
-            </div>
-            <div class="project-tech">
-                <span>CNN</span>
-                <span>Segmentación</span>
-                <span>TensorFlow</span>
-                <span>TensorRT</span>
-            </div>
-            <div class="project-image">
-                <img src="images/proyectos/anchoveta-icon.png" alt="Imagen anchoveta">
-            </div>
-
-        </article>
-    
-        <article>
-            <div class="project-description">
-                <h3>Detección de arco eléctrico en trenes</h3>
-                <p>Desarrollo de técnicas de aprendizaje profundo como CNN, LSTM y MLP para la detección de arco eléctrico y centralidad entre pantógrafo y catenaria en los trenes de la Línea 2 del Metro de Lima.</p>
-                <!--<a href="#">Leer más</a>-->
-            </div>
-            <div class="project-tech">
-                <span>CNN</span>
-                <span>LSTM</span>
-                <span>TensorFlow</span>
-                <span>TensorRT</span>                
-            </div>
-
-            <div class="project-image">
-                <img src="images/proyectos/train-icon.png" alt="Imagen tren">
-            </div>
-
-        </article>
-    
-        <article>
-            <div class="project-description">
-                <h3>Modelo predictivo de fallas en motores</h3>
-                <p>Creación de un modelo para la predicción de fallas utilizando señales de vibración como parte de un sistema de gemelo digital de motores, incorporando SQL, Lógica Difusa, MLP y K-means clustering.</p>
-                <!--<a href="#">Leer más</a>-->
-            </div>
-            <div class="project-tech">
-                <span>SQL</span>
-                <span>Lógica Difusa</span>
-                <span>MLP</span>
-                <span>K-means clustering</span>
-                <span>LSTM</span>
-            </div>
-            <div class="project-image">
-                <img src="images/proyectos/motor-icon.png" alt="Imagen motor">
-            </div>
-
-        </article>
-    
-        <article>
-            <div class="project-description">
-                <h3>Predicción de lluvias en microcuenca Huajuiri</h3>
-                <p>Utilización de LSTM y SQL para la predicción de lluvias en la microcuenca Huajuiri, contribuyendo a la gestión del agua y agricultura en la región de Apurímac, Perú.</p>
-                <!--<a href="#">Leer más</a>-->
-            </div>
-            <div class="project-tech">
-                <span>LSTM</span>
-                <span>SQL</span>
-            </div>
-            <div class="project-image">
-                <img src="images/proyectos/lluvia-icon.png" alt="Imagen lluvia">
-            </div>
-        </article>
-    
-        <article>
-            <div class="project-description">
-                <h3>Silla de ruedas controlada con la vista</h3>
-                <p>Desarrollo de un sistema de detección de sentido del ojo para la creación de una silla de ruedas controlada con la vista, ofreciendo mayor autonomía a personas tetrapléjicas mediante el uso de CNN y VertexAI.</p>
-                <!--<a href="#">Leer más</a>-->
-            </div>
-            <div class="project-tech">
-                <span>CNN</span>
-                <span>Keras</span>
-                <span>VertexAI</span>
-            </div>
-            <div class="project-image">
-                <img src="images/proyectos/wheelchair.png" alt="Imagen lluvia">
-            </div>
-        </article>
-    
-        <article>
-            <div class="project-description">
-                <h3>Monitoreo de técnica de tiro en Archery Lab</h3>
-                <p>En colaboración con la Federación Peruana de Tiro con Arco, se desarrolló una solución para el monitoreo de la técnica de ejecución de tiro por parte del atleta y la detección de la ubicación de caída de flecha en la diana mediante CNN.</p>
-                
-            </div>
-            <div class="project-tech">
-                <span>CNN</span>
-                <span>Keras</span>
-                <span>OpenCV</span>
-            </div>
-            <div class="project-image">
-                <img src="images/proyectos/archery-icon.png" alt="Imagen tiro con arco">
-            </div>
-        </article>
-    
-        
-    </section>
-    
+    </nav>
+    <!-- Navbar End -->
 
 
-
-   
-    <!-- Sección de Tecnologías -->
-    <section id="tecnologias">
-        <h2>Tecnologías</h2>
-        <div class="tech-logos">
-            <!-- Asegúrate de tener los derechos para usar los logos o que sean de dominio público -->
-            <img src="images/logo-python.png" alt="Python" />
-            <img src="images/c++-icon.png" alt="C++" />
-            <img src="images/r-icon.png" alt="R" />
-            <img src="images/javascript-icon.png" alt="JavaScript" />
-            <img src="images/sql-icon.png" alt="SQL" />
-
-            <img src="images/logo-tensorflow.png" alt="TensorFlow" />
-            <img src="images/keras-icon.png" alt="Keras" />
-            <img src="images/pytorch-icon.png" alt="PyTorch" />
-            <img src="images/tensorrt-icon.png" alt="TensorRT" />
-            <img src="images/opencv-icon.png" alt="OpenCV" />
-
-            <img src="images/numpy-icon.png" alt="NumPy" />            
-            <img src="images/Pandas-icon.png" alt="Pandas" />
-            <img src="images/airflow-icon.png" alt="Airflow" />
-            <img src="images/scikit-learn-icon.png" alt="Scikit-learn" />
-            <img src="images/spark-icon.png" alt="Apache Spark" />
-
-            <img src="images/git-icon.png" alt="Git" />
-
-            <img src="images/docker-icon.png" alt="Docker" />     
-            
-            <img src="images/jupyter-notebook-icon.png" alt="Jupyter Notebook" />
-            <img src="images/linux-icon.png" alt="Linux" />
-
-            <img src="images/logo-tensorflow.png" alt="TensorFlow Logo" />
-            <img src="images/matplotlib.png" alt="Matplotlib" />            
-            <img src="images/power-bi-icon.png" alt="Power BI" /> 
-            <img src="images/seaborn-icon.png" alt="Seaborn" />
-            
-            <img src="images/gcp-icon.png" alt="Google Cloud Platform" />
-            <img src="images/azure-icon.png" alt="Microsoft Azure" />
-
+    <!-- Video Modal Start -->
+    <div class="modal fade" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>        
+                    <!-- 16:9 aspect ratio -->
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" src="" id="video"  allowscriptaccess="always" allow="autoplay"></iframe>
+                    </div>
+                </div>
+            </div>
         </div>
-    </section>
-
-    <!-- Sección de Colaboración -->
-    <section id="colaboracion">
-        <h2>¿Creamos algo juntos?</h2>
-        <p>Si tienes una idea o proyecto en mente y crees que puedo ayudarte, ¡no dudes en ponerte en contacto!</p>
-        <a href="mailto:eliorevillaperez@gmail.com" class="contact-button">Envíame un correo</a>
-    </section>
+    </div>
+    <!-- Video Modal End -->
 
 
-    <section id="contacto">
-        <h2>Contacto</h2>
-        <ul class="contact-info">
-            <li><img src="images/email-icon.png" alt="Email Icon" class="contact-icon">eliorevillaperez@gmail.com</li>            
-            <li><img src="images/linkedin-icon.png" alt="LinkedIn Icon" class="contact-icon"><a href="https://www.linkedin.com/in/eliorevilla">Elio Revilla Pérez</a></li>
-            <li><img src="images/github-icon.png" alt="GitHub Icon" class="contact-icon"><a href="https://github.com/ElioRevilla">ElioRevilla</a></li>
-        </ul>
-    </section>
+    <!-- Header Start -->
+    <div class="container-fluid bg-primary d-flex align-items-center mb-5 py-5" id="home" style="min-height: 100vh;">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-5 px-5 pl-lg-0 pb-5 pb-lg-0">
+                    <img class="img-fluid w-100 rounded-circle shadow-sm" src="img/elio_revilla.jpg" alt="">
+                </div>
+                <div class="col-lg-7 text-center text-lg-left">
+                    <h3 class="text-white font-weight-normal mb-3 en">I'm</h3>
+                    <h3 class="text-white font-weight-normal mb-3 es" style="display:none;">Soy</h3>
+                    <h1 class="display-3 text-uppercase text-primary mb-2" style="-webkit-text-stroke: 2px #ffffff;">Elio Revilla</h1>
+                    <h1 class="typed-text-output d-inline font-weight-lighter text-white"></h1>
+                    <div class="typed-text en d-none">AI Engineer, Data Scientist, Electronic Engineer</div>
+                     <!-- <div class="typed-text es d-none" style="display:none;">Ingeniero de IA, Científico de Datos, Ingeniero Electrónico</div> -->
 
-    <footer>
-        <p>© 2024 Elio Revilla Pérez. Todos los derechos reservados.</p>
-    </footer>
+                    <div class="d-flex align-items-center justify-content-center justify-content-lg-start pt-5">
+                        <a href="https://www.linkedin.com/in/elio-revilla-perez/" class="btn btn-outline-light mr-5 en" target="_blank">LinkedIn</a>
+                        <a href="https://www.linkedin.com/in/elio-revilla-perez/" class="btn btn-outline-light mr-5 es" target="_blank" style="display:none;">LinkedIn</a>                                               
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Header End -->
 
-    <script src="script.js"></script>
+
+    <!-- About Start -->
+    <div class="container-fluid py-5" id="about">
+        <div class="container">
+            <div class="position-relative d-flex align-items-center justify-content-center">
+                <h1 class="display-1 text-uppercase text-white en" style="-webkit-text-stroke: 1px #dee2e6;">About</h1>
+                <h1 class="display-1 text-uppercase text-white es" style="-webkit-text-stroke: 1px #dee2e6; display:none;">Sobre Mí</h1>
+                <h1 class="position-absolute text-uppercase text-primary en">About Me</h1>
+                <h1 class="position-absolute text-uppercase text-primary es" style="display:none;">Sobre Mí</h1>
+            </div>
+            <div class="row align-items-center">
+                <!-- <div class="col-lg-5 pb-4 pb-lg-0">
+                    <img class="img-fluid rounded w-100" src="img/about.jpg" alt="">
+                </div> -->
+                                    
+                    <h3 class="mb-4 en">Machine Learning Engineer & Data Scientist</h3>
+                    <h3 class="mb-4 es" style="display:none;">Ingeniero de Machine Learning & Científico de Datos</h3>
+                    <p class="en" style="font-size: 1.25rem;"> I am an electronic engineer passionate about data science, Artificial Intelligence (AI), and Industrial IoT (IIoT). With extensive experience in AI projects and data analysis in industrial environments, I am currently pursuing a master's degree in Artificial Intelligence. My professional background includes developing AI models using TensorFlow, Keras, and PyTorch, deploying solutions on GCP and Azure, and leading AI and IoT projects in industrial settings.</p>
+                    <p class="es" style="font-size: 1.25rem; display:none;"> Soy un ingeniero electrónico apasionado por la ciencia de datos, la Inteligencia Artificial (IA) y el IIoT industrial. Con amplia experiencia en proyectos de IA y análisis de datos en entornos industriales, actualmente estoy cursando una maestría en Inteligencia Artificial. Mi experiencia profesional incluye el desarrollo de modelos de IA utilizando TensorFlow, Keras y PyTorch, el despliegue de soluciones en GCP y Azure, y la dirección de proyectos de IA e IoT en entornos industriales.</p>
+
+                    <!--<a href="" class="btn btn-outline-primary">Learn More</a> -->
+                
+            </div>
+        </div>
+    </div>
+    <!-- About End -->
+
+
+    <!-- Qualification Start -->
+    <!-- <div class="container-fluid py-5" id="qualification">
+        <div class="container">
+            <div class="position-relative d-flex align-items-center justify-content-center">
+                <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">Quality</h1>
+                <h1 class="position-absolute text-uppercase text-primary">Education & Expericence</h1>
+            </div>
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h3 class="mb-4">My Education</h3>
+                    <div class="border-left border-primary pt-2 pl-4 ml-2">
+                        <div class="position-relative mb-4">
+                            <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -32px;"></i>
+                            <h5 class="font-weight-bold mb-1">Master In CSE</h5>
+                            <p class="mb-2"><strong>Cambridge University</strong> | <small>2000 - 2050</small></p>
+                            <p>Tempor eos dolore amet tempor dolor tempor. Dolore ea magna sit amet dolor eirmod. Eos ipsum est tempor dolor. Clita lorem kasd sed ea lorem diam ea lorem eirmod duo sit ipsum stet lorem diam</p>
+                        </div>
+                        <div class="position-relative mb-4">
+                            <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -32px;"></i>
+                            <h5 class="font-weight-bold mb-1">Master In CSE</h5>
+                            <p class="mb-2"><strong>Cambridge University</strong> | <small>2000 - 2050</small></p>
+                            <p>Tempor eos dolore amet tempor dolor tempor. Dolore ea magna sit amet dolor eirmod. Eos ipsum est tempor dolor. Clita lorem kasd sed ea lorem diam ea lorem eirmod duo sit ipsum stet lorem diam</p>
+                        </div>
+                        <div class="position-relative mb-4">
+                            <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -32px;"></i>
+                            <h5 class="font-weight-bold mb-1">Master In CSE</h5>
+                            <p class="mb-2"><strong>Cambridge University</strong> | <small>2000 - 2050</small></p>
+                            <p>Tempor eos dolore amet tempor dolor tempor. Dolore ea magna sit amet dolor eirmod. Eos ipsum est tempor dolor. Clita lorem kasd sed ea lorem diam ea lorem eirmod duo sit ipsum stet lorem diam</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <h3 class="mb-4">My Expericence</h3>
+                    <div class="border-left border-primary pt-2 pl-4 ml-2">
+                        <div class="position-relative mb-4">
+                            <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -32px;"></i>
+                            <h5 class="font-weight-bold mb-1">Web Designer</h5>
+                            <p class="mb-2"><strong>Soft Company</strong> | <small>2000 - 2050</small></p>
+                            <p>Tempor eos dolore amet tempor dolor tempor. Dolore ea magna sit amet dolor eirmod. Eos ipsum est tempor dolor. Clita lorem kasd sed ea lorem diam ea lorem eirmod duo sit ipsum stet lorem diam</p>
+                        </div>
+                        <div class="position-relative mb-4">
+                            <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -32px;"></i>
+                            <h5 class="font-weight-bold mb-1">Web Designer</h5>
+                            <p class="mb-2"><strong>Soft Company</strong> | <small>2000 - 2050</small></p>
+                            <p>Tempor eos dolore amet tempor dolor tempor. Dolore ea magna sit amet dolor eirmod. Eos ipsum est tempor dolor. Clita lorem kasd sed ea lorem diam ea lorem eirmod duo sit ipsum stet lorem diam</p>
+                        </div>
+                        <div class="position-relative mb-4">
+                            <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -32px;"></i>
+                            <h5 class="font-weight-bold mb-1">Web Designer</h5>
+                            <p class="mb-2"><strong>Soft Company</strong> | <small>2000 - 2050</small></p>
+                            <p>Tempor eos dolore amet tempor dolor tempor. Dolore ea magna sit amet dolor eirmod. Eos ipsum est tempor dolor. Clita lorem kasd sed ea lorem diam ea lorem eirmod duo sit ipsum stet lorem diam</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>  -->
+    <!-- Qualification End -->
+
+
+    <!-- Skill Start -->
+    <div class="container-fluid py-5" id="skill">
+        <div class="container">            
+            <div class="position-relative d-flex align-items-center justify-content-center">
+                <h1 class="display-1 text-uppercase text-white en" style="-webkit-text-stroke: 1px #dee2e6;">Skills</h1>
+                <h1 class="display-1 text-uppercase text-white es" style="-webkit-text-stroke: 1px #dee2e6; display:none;">Habilidades</h1>
+                <h1 class="position-absolute text-uppercase text-primary en">My Skills</h1>
+                <h1 class="position-absolute text-uppercase text-primary es" style="display:none;">Tecnologías</h1>
+            </div>
+            
+            <div class="row justify-content-center">
+                <div class="col-md-2 text-center">
+                    <div class="skill mb-4">
+                        <img src="img/logo-python.png" alt="Python" style="width: 60px; height: 60px;">
+                        <h6 class="font-weight-bold mt-2">Python</h6>
+                    </div>
+                </div>
+                <div class="col-md-2 text-center">
+                    <div class="skill mb-4">
+                        <img src="img/c++-icon.png" alt="C++" style="width: 60px; height: 60px;">
+                        <h6 class="font-weight-bold mt-2">C++</h6>
+                    </div>
+                </div>
+                <div class="col-md-2 text-center">
+                    <div class="skill mb-4">
+                        <img src="img/r-icon.png" alt="R" style="width: 60px; height: 60px;">
+                        <h6 class="font-weight-bold mt-2">R</h6>
+                    </div>
+                </div>
+                <div class="col-md-2 text-center">
+                    <div class="skill mb-4">
+                        <img src="img/javascript-icon.png" alt="JavaScript" style="width: 60px; height: 60px;">
+                        <h6 class="font-weight-bold mt-2">JavaScript</h6>
+                    </div>
+                </div>
+                <div class="col-md-2 text-center">
+                    <div class="skill mb-4">
+                        <img src="img/sql-icon.png" alt="SQL" style="width: 60px; height: 60px;">
+                        <h6 class="font-weight-bold mt-2">SQL</h6>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="row justify-content-center">
+                <div class="col-md-2 text-center">
+                    <div class="skill mb-4">
+                        <img src="img/logo-tensorflow.png" alt="TensorFlow" style="width: 60px; height: 60px;">
+                        <h6 class="font-weight-bold mt-2">TensorFlow</h6>
+                    </div>
+                </div>
+                <div class="col-md-2 text-center">
+                    <div class="skill mb-4">
+                        <img src="img/keras-icon.png" alt="Keras" style="width: 60px; height: 60px;">
+                        <h6 class="font-weight-bold mt-2">Keras</h6>
+                    </div>
+                </div>
+                <div class="col-md-2 text-center">
+                    <div class="skill mb-4">
+                        <img src="img/pytorch-icon.png" alt="PyTorch" style="width: 60px; height: 60px;">
+                        <h6 class="font-weight-bold mt-2">PyTorch</h6>
+                    </div>
+                </div>
+                <div class="col-md-2 text-center">
+                    <div class="skill mb-4">
+                        <img src="img/tensorrt-icon.png" alt="TensorRT" style="width: 60px; height: 60px;">
+                        <h6 class="font-weight-bold mt-2">TensorRT</h6>
+                    </div>
+                </div>
+                <div class="col-md-2 text-center">
+                    <div class="skill mb-4">
+                        <img src="img/opencv-icon.png" alt="OpenCV" style="width: 60px; height: 60px;">
+                        <h6 class="font-weight-bold mt-2">OpenCV</h6>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="row justify-content-center">
+                <div class="col-md-2 text-center">
+                    <div class="skill mb-4">
+                        <img src="img/numpy-icon.png" alt="NumPy" style="width: 60px; height: 60px;">
+                        <h6 class="font-weight-bold mt-2">NumPy</h6>
+                    </div>
+                </div>
+                <div class="col-md-2 text-center">
+                    <div class="skill mb-4">
+                        <img src="img/pandas-icon.png" alt="Pandas" style="width: 60px; height: 60px;">
+                        <h6 class="font-weight-bold mt-2">Pandas</h6>
+                    </div>
+                </div>
+                <div class="col-md-2 text-center">
+                    <div class="skill mb-4">
+                        <img src="img/airflow-icon.png" alt="Apache Airflow" style="width: 60px; height: 60px;">
+                        <h6 class="font-weight-bold mt-2">Apache Airflow</h6>
+                    </div>
+                </div>
+                <div class="col-md-2 text-center">
+                    <div class="skill mb-4">
+                        <img src="img/scikit-learn-icon.png" alt="Scikit-learn" style="width: 60px; height: 60px;">
+                        <h6 class="font-weight-bold mt-2">Scikit-learn</h6>
+                    </div>
+                </div>
+                <div class="col-md-2 text-center">
+                    <div class="skill mb-4">
+                        <img src="img/spark-icon.png" alt="Apache Spark" style="width: 60px; height: 60px;">
+                        <h6 class="font-weight-bold mt-2">Apache Spark</h6>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="row justify-content-center">
+                <div class="col-md-2 text-center">
+                    <div class="skill mb-4">
+                        <img src="img/git-icon.png" alt="Git" style="width: 60px; height: 60px;">
+                        <h6 class="font-weight-bold mt-2">Git</h6>
+                    </div>
+                </div>
+                <div class="col-md-2 text-center">
+                    <div class="skill mb-4">
+                        <img src="img/docker-icon.png" alt="Docker" style="width: 60px; height: 60px;">
+                        <h6 class="font-weight-bold mt-2">Docker</h6>
+                    </div>
+                </div>
+                <div class="col-md-2 text-center">
+                    <div class="skill mb-4">
+                        <img src="img/jupyter-notebook-icon.png" alt="Jupyter Notebook" style="width: 60px; height: 60px;">
+                        <h6 class="font-weight-bold mt-2">Jupyter Notebook</h6>
+                    </div>
+                </div>
+                <div class="col-md-2 text-center">
+                    <div class="skill mb-4">
+                        <img src="img/linux-icon.png" alt="Linux" style="width: 60px; height: 60px;">
+                        <h6 class="font-weight-bold mt-2">Linux</h6>
+                    </div>
+                </div>
+                <div class="col-md-2 text-center">
+                    <div class="skill mb-4">
+                        <img src="img/matplotlib.png" alt="Matplotlib" style="width: 60px; height: 60px;">
+                        <h6 class="font-weight-bold mt-2">Matplotlib</h6>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="row justify-content-center">
+                <div class="col-md-2 text-center">
+                    <div class="skill mb-4">
+                        <img src="img/power-bi-icon.png" alt="Power BI" style="width: 60px; height: 60px;">
+                        <h6 class="font-weight-bold mt-2">Power BI</h6>
+                    </div>
+                </div>
+                <div class="col-md-2 text-center">
+                    <div class="skill mb-4">
+                        <img src="img/seaborn-icon.png" alt="Seaborn" style="width: 60px; height: 60px;">
+                        <h6 class="font-weight-bold mt-2">Seaborn</h6>
+                    </div>
+                </div>
+                <div class="col-md-2 text-center">
+                    <div class="skill mb-4">
+                        <img src="img/gcp-icon.png" alt="Google Cloud Platform" style="width: 60px; height: 60px;">
+                        <h6 class="font-weight-bold mt-2">Google Cloud Platform</h6>
+                    </div>
+                </div>
+                <div class="col-md-2 text-center">
+                    <div class="skill mb-4">
+                        <img src="img/azure-icon.png" alt="Microsoft Azure" style="width: 60px; height: 60px;">
+                        <h6 class="font-weight-bold mt-2">Microsoft Azure</h6>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Nueva fila con los iconos adicionales -->
+            <div class="row justify-content-center">
+                <div class="col-md-2 text-center">
+                    <div class="skill mb-4">
+                        <img src="img/huggingface-icon.png" alt="Hugging Face" style="width: 60px; height: 60px;">
+                        <h6 class="font-weight-bold mt-2">Hugging Face</h6>
+                    </div>
+                </div>
+                <div class="col-md-2 text-center">
+                    <div class="skill mb-4">
+                        <img src="img/langchain-icon.png" alt="LangChain" style="width: 60px; height: 60px;">
+                        <h6 class="font-weight-bold mt-2">LangChain</h6>
+                    </div>
+                </div>
+                <div class="col-md-2 text-center">
+                    <div class="skill mb-4">
+                        <img src="img/mlflow-icon.png" alt="MLflow" style="width: 60px; height: 60px;">
+                        <h6 class="font-weight-bold mt-2">MLflow</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    
+    
+    <!-- Skill End -->
+
+
+    <!-- Services Start -->
+    <div class="container-fluid pt-5" id="projects">
+        <div class="container">
+            <div class="position-relative d-flex align-items-center justify-content-center">
+                <h1 class="display-1 text-uppercase text-white en" style="-webkit-text-stroke: 1px #dee2e6;">Projects</h1>
+                <h1 class="display-1 text-uppercase text-white es" style="-webkit-text-stroke: 1px #dee2e6; display:none;">Proyectos</h1>
+                <h1 class="position-absolute text-uppercase text-primary en">My Projects</h1>
+                <h1 class="position-absolute text-uppercase text-primary es" style="display:none;">Mis Proyectos</h1>
+            </div>
+            <div class="row pb-3">
+                <div class="col-lg-4 col-md-6 text-center mb-5 ">
+                    <div class="d-flex align-items-center justify-content-center mb-4">
+                        <i class="fa fa-2x fa-shield-alt service-icon bg-primary text-white mr-3"></i>
+                        <h4 class="font-weight-bold m-0 en">Chatbot RAG Generadora Metropolitana</h4>
+                        <h4 class="font-weight-bold m-0 es" style="display:none;">Chatbot RAG Generadora Metropolitana</h4>
+                    </div>
+                    <p class="en">Development of a cybersecurity platform using LLM to provide a more natural interaction with the user when making inquiries about presented events.</p>
+                    <p class="es" style="display:none;">Desarrollo de una plataforma de ciberseguridad usando LLM para tener una interacción más natural con el usuario cuando haga consultas sobre eventos presentados.</p>
+                    <!-- Tecnologías usadas -->
+                    <div class="d-flex flex-wrap justify-content-center mt-3">
+                        <span class="badge badge-light m-1">LLM</span>
+                        <span class="badge badge-light m-1">Docker</span>
+                        <span class="badge badge-light m-1">Azure</span>
+                        <span class="badge badge-light m-1">Open AI</span>
+                        <span class="badge badge-light m-1">GPT-3.5-Turbo</span>
+                        <span class="badge badge-light m-1">Pinecone</span>
+                        <span class="badge badge-light m-1">LangChain</span>
+                        <span class="badge badge-light m-1">LLMOps</span>
+                        <span class="badge badge-light m-1">Flask</span>
+                    </div>
+                
+                    <a class="border-bottom border-primary text-decoration-none en" href="https://github.com/ElioRevilla/llm-models-deploy" target="_blank">Github</a>
+                    <a class="border-bottom border-primary text-decoration-none es" href="https://github.com/ElioRevilla/llm-models-deploy" target="_blank" style="display:none;">Github</a>                
+                </div>
+                <div class="col-lg-4 col-md-6 text-center mb-5">
+                    <div class="d-flex align-items-center justify-content-center mb-4">
+                        <i class="fa fa-2x fa-database service-icon bg-primary text-white mr-3"></i>
+                        <h4 class="font-weight-bold m-0 en">Accident Predictive Model - Mutual de Seguridad</h4>
+                        <h4 class="font-weight-bold m-0 es" style="display:none;">Modelo predictivo de accidentes - Mutual de Seguridad</h4>
+                    </div>
+                    <p class="en">Generation and standardization of a database for creating predictive models to estimate accident reports and occurrences within Mutual de Seguridad's partner institutions.</p>
+                    <p class="es" style="display:none;">Generación y estandarización de la base de datos para la generación de modelos predictivo para calcular denuncias y accidentes en instituciones socias de Mutual de Seguridad.</p>
+                    <!-- Tecnologías usadas -->
+                    <div class="d-flex flex-wrap justify-content-center mt-3">
+                        <span class="badge badge-light m-1">Transformers</span>
+                        <span class="badge badge-light m-1">GCP</span>
+                        <span class="badge badge-light m-1">Flask</span>
+                        <span class="badge badge-light m-1">Power BI</span>
+                    </div>                                   
+                    
+                </div>
+            
+                <div class="col-lg-4 col-md-6 text-center mb-5">
+                    <div class="d-flex align-items-center justify-content-center mb-4">
+                        <i class="fa fa-2x fa-robot service-icon bg-primary text-white mr-3"></i>
+                        <h4 class="font-weight-bold m-0 en">Cybersecurity Chatbot - BANCO BCI</h4>
+                        <h4 class="font-weight-bold m-0 es" style="display:none;">Chatbot de Ciberseguridad - BANCO BCI</h4>
+                    </div>
+                    <p class="en">Development of a Cybersecurity Chatbot based on Natural Language Processing for BCI Employees</p>
+                    <p class="es" style="display:none;">Desarrollo de un Chatbot de Ciberseguridad basado en Procesamiento de Lenguaje Natural para Colaboradores BCI</p>
+                    
+                    <!-- Tecnologías usadas -->
+                    <div class="d-flex flex-wrap justify-content-center mt-3">
+                        <span class="badge badge-light m-1">GCP</span>
+                        <span class="badge badge-light m-1">Dialogflow</span>
+                        <span class="badge badge-light m-1">Vertex AI</span>
+                        <span class="badge badge-light m-1">Gemini</span>
+                        <span class="badge badge-light m-1">Flask</span>
+                        <span class="badge badge-light m-1">Open AI</span>
+                    </div>
+                </div>
+                
+
+                <div class="col-lg-4 col-md-6 text-center mb-5">
+                    <div class="d-flex align-items-center justify-content-center mb-4">
+                        <i class="fa fa-2x fa-industry service-icon bg-primary text-white mr-3"></i>
+                        <h4 class="font-weight-bold m-0 en">GETs Drop Detection in Mining</h4>
+                        <h4 class="font-weight-bold m-0 es" style="display:none;">Detección de caída de GETs en minería</h4>
+                    </div>
+                    <p class="en">Development of a CNN model to detect the drop of teeth from shovels and loaders in the mining sector, improving safety and operational efficiency.</p>
+                    <p class="es" style="display:none;">Desarrollo de un modelo de CNN para detectar la caída de dientes de palas y cargadores en el sector minero, mejorando la seguridad y eficiencia operativa.</p>
+                    
+                    <!-- Tecnologías usadas -->
+                    <div class="d-flex flex-wrap justify-content-center mt-3">
+                        <span class="badge badge-light m-1">CNN</span>
+                        <span class="badge badge-light m-1">Python</span>
+                        <span class="badge badge-light m-1">TensorFlow</span>
+                        <span class="badge badge-light m-1">TensorRT</span>
+                        <span class="badge badge-light m-1">Jetson-NVIDIA</span>
+                    </div>                    
+                </div>
+                
+                 <div class="col-lg-4 col-md-6 text-center mb-5">
+                    <div class="d-flex align-items-center justify-content-center mb-4">
+                        <i class="fa fa-2x fa-fish service-icon bg-primary text-white mr-3"></i>
+                        <h4 class="font-weight-bold m-0 en">Anchovy Size Classification</h4>
+                        <h4 class="font-weight-bold m-0 es" style="display:none;">Clasificación de tamaño de anchovetas</h4>
+                    </div>
+                    <p class="en">Implementation of a computer vision system based on CNN and segmentation to classify anchovies by size on disembarkation conveyor belts, optimizing the selection process.</p>
+                    <p class="es" style="display:none;">Implementación de un sistema de visión computarizada basado en CNN y segmentación para clasificar anchovetas por tamaño en cintas transportadoras de desembarque, optimizando el proceso de selección.</p>
+                    
+                    <!-- Tecnologías usadas -->
+                    <div class="d-flex flex-wrap justify-content-center mt-3">
+                        <span class="badge badge-light m-1">CNN</span>
+                        <span class="badge badge-light m-1">Segmentación</span>
+                        <span class="badge badge-light m-1">TensorFlow</span>
+                        <span class="badge badge-light m-1">TensorRT</span>
+                    </div>  
+                </div>
+                
+                <div class="col-lg-4 col-md-6 text-center mb-5">
+                    <div class="d-flex align-items-center justify-content-center mb-4">
+                        <i class="fa fa-2x fa-subway service-icon bg-primary text-white mr-3"></i>
+                        <h4 class="font-weight-bold m-0 en">Electric Arc Detection in Trains</h4>
+                        <h4 class="font-weight-bold m-0 es" style="display:none;">Detección de arco eléctrico en trenes</h4>
+                    </div>
+                    <p class="en">Development of deep learning techniques like CNN, LSTM, and MLP for detecting electric arcs and centrality between pantograph and catenary in Line 2 trains of the Lima Metro.</p>
+                    <p class="es" style="display:none;">Desarrollo de técnicas de aprendizaje profundo como CNN, LSTM y MLP para la detección de arco eléctrico y centralidad entre pantógrafo y catenaria en los trenes de la Línea 2 del Metro de Lima.</p>
+                    
+                    <!-- Tecnologías usadas -->
+                    <div class="d-flex flex-wrap justify-content-center mt-3">
+                        <span class="badge badge-light m-1">CNN</span>
+                        <span class="badge badge-light m-1">LSTM</span>
+                        <span class="badge badge-light m-1">TensorFlow</span>
+                        <span class="badge badge-light m-1">TensorRT</span>
+                    </div>                   
+                    
+                </div>
+                
+            
+                <div class="col-lg-4 col-md-6 text-center mb-5">
+                    <div class="d-flex align-items-center justify-content-center mb-4">
+                        <i class="fa fa-2x fa-cogs service-icon bg-primary text-white mr-3"></i>
+                        <h4 class="font-weight-bold m-0 en">Predictive Maintenance Model for Motors</h4>
+                        <h4 class="font-weight-bold m-0 es" style="display:none;">Modelo predictivo de fallas en motores</h4>
+                    </div>
+                    <p class="en">Creation of a predictive maintenance model using vibration signals as part of a motor digital twin system, incorporating SQL, Fuzzy Logic, MLP, and K-means clustering.</p>
+                    <p class="es" style="display:none;">Creación de un modelo para la predicción de fallas utilizando señales de vibración como parte de un sistema de gemelo digital de motores, incorporando SQL, Lógica Difusa, MLP y K-means clustering.</p>
+                    
+                    <!-- Tecnologías usadas -->
+                    <div class="d-flex flex-wrap justify-content-center mt-3">
+                        <span class="badge badge-light m-1">SQL</span>
+                        <span class="badge badge-light m-1">Lógica Difusa</span>
+                        <span class="badge badge-light m-1">MLP</span>
+                        <span class="badge badge-light m-1">K-means clustering</span>
+                        <span class="badge badge-light m-1">LSTM</span>
+                    </div>
+                    
+                    
+                </div>
+
+                <!-- Segundo Proyecto Adicional -->
+                <div class="col-lg-4 col-md-6 text-center mb-5">
+                    <div class="d-flex align-items-center justify-content-center mb-4">
+                        <i class="fa fa-2x fa-cloud service-icon bg-primary text-white mr-3"></i>
+                        <h4 class="font-weight-bold m-0 en">Rainfall Prediction in Huajuri Micro-Basin</h4>
+                        <h4 class="font-weight-bold m-0 es" style="display:none;">Predicción de lluvias en microcuenca Huajuri</h4>
+                    </div>
+                    <p class="en">Using LSTM and SQL for rainfall prediction in the Huajuri micro-basin, contributing to water and agriculture management in the Apurímac region, Peru.</p>
+                    <p class="es" style="display:none;">Utilización de LSTM y SQL para la predicción de lluvias en la microcuenca Huajuri, contribuyendo a la gestión del agua y agricultura en la región de Apurímac, Perú.</p>
+                    
+                    <!-- Tecnologías usadas -->
+                    <div class="d-flex flex-wrap justify-content-center mt-3">
+                        <span class="badge badge-light m-1">LSTM</span>
+                        <span class="badge badge-light m-1">SQL</span>
+                    </div>
+                    
+                    
+                </div>
+
+                <!-- Tercer Proyecto Adicional -->
+                <div class="col-lg-4 col-md-6 text-center mb-5">
+                    <div class="d-flex align-items-center justify-content-center mb-4">
+                        <i class="fa fa-2x fa-wheelchair service-icon bg-primary text-white mr-3"></i>
+                        <h4 class="font-weight-bold m-0 en">Vision-Controlled Wheelchair</h4>
+                        <h4 class="font-weight-bold m-0 es" style="display:none;">Silla de ruedas controlada con la vista</h4>
+                    </div>
+                    <p class="en">Development of an eye-tracking system for the creation of a vision-controlled wheelchair, offering greater autonomy to quadriplegic individuals through the use of CNN and VertexAI.</p>
+                    <p class="es" style="display:none;">Desarrollo de un sistema de detección de sentido del ojo para la creación de una silla de ruedas controlada con la vista, ofreciendo mayor autonomía a personas tetrapléjicas mediante el uso de CNN y VertexAI.</p>
+                    
+                    <!-- Tecnologías usadas -->
+                    <div class="d-flex flex-wrap justify-content-center mt-3">
+                        <span class="badge badge-light m-1">CNN</span>
+                        <span class="badge badge-light m-1">Keras</span>
+                        <span class="badge badge-light m-1">VertexAI</span>
+                    </div>
+                    
+                    
+                </div>
+
+                <!-- Cuarto Proyecto Adicional -->
+                <div class="col-lg-4 col-md-6 text-center mb-5">
+                    <div class="d-flex align-items-center justify-content-center mb-4">
+                        <i class="fa fa-2x fa-bullseye service-icon bg-primary text-white mr-3"></i>
+                        <h4 class="font-weight-bold m-0 en">Archery Lab Shot Monitoring</h4>
+                        <h4 class="font-weight-bold m-0 es" style="display:none;">Monitoreo de técnica de tiro en Archery Lab</h4>
+                    </div>
+                    <p class="en">In collaboration with the Peruvian Archery Federation, a solution was developed for monitoring the shot execution technique by the athlete and detecting the fall location of the arrow in the target using CNN.</p>
+                    <p class="es" style="display:none;">En colaboración con la Federación Peruana de Tiro con Arco, se desarrolló una solución para el monitoreo de la técnica de ejecución de tiro por parte del atleta y la detección de la ubicación de caída de flecha en la diana mediante CNN.</p>
+                    
+                    <!-- Tecnologías usadas -->
+                    <div class="d-flex flex-wrap justify-content-center mt-3">
+                        <span class="badge badge-light m-1">CNN</span>
+                        <span class="badge badge-light m-1">Keras</span>
+                        <span class="badge badge-light m-1">OpenCV</span>
+                    </div>
+                  
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Services End -->
+
+
+    <!-- Portfolio Start -->
+    <!--  <div class="container-fluid pt-5 pb-3" id="portfolio">
+        <div class="container">            
+            <div class="position-relative d-flex align-items-center justify-content-center">
+                <h1 class="display-1 text-uppercase text-white en" style="-webkit-text-stroke: 1px #dee2e6;">Gallery</h1>
+                <h1 class="display-1 text-uppercase text-white es" style="-webkit-text-stroke: 1px #dee2e6; display:none;">Galería</h1>
+                <h1 class="position-absolute text-uppercase text-primary en">My Portfolio</h1>
+                <h1 class="position-absolute text-uppercase text-primary es" style="display:none;">Mi Portafolio</h1>
+            </div>
+
+            <div class="row portfolio-container">
+               
+                <div class="col-lg-4 col-md-6 mb-4 portfolio-item en">
+                    <div class="position-relative overflow-hidden mb-2">
+                        <img class="img-fluid rounded w-100" src="img/portfolio-1.jpg">
+                        <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center">
+                            <a href="img/portfolio-1.jpg" data-lightbox="portfolio">
+                                <i class="fa fa-plus text-white" style="font-size: 60px;"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div class="col-lg-4 col-md-6 mb-4 portfolio-item es" style="display:none;">
+                    <div class="position-relative overflow-hidden mb-2">
+                        <img class="img-fluid rounded w-100" src="img/portfolio-2.jpg">
+                        <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center">
+                            <a href="img/portfolio-2.jpg" data-lightbox="portfolio">
+                                <i class="fa fa-plus text-white" style="font-size: 60px;"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4 portfolio-item">
+                    <div class="position-relative overflow-hidden mb-2">
+                        <img class="img-fluid rounded w-100" src="img/portfolio-2.jpg" alt="">
+                        <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center">
+                            <a href="img/portfolio-2.jpg" data-lightbox="portfolio">
+                                <i class="fa fa-plus text-white" style="font-size: 60px;"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4 portfolio-item">
+                    <div class="position-relative overflow-hidden mb-2">
+                        <img class="img-fluid rounded w-100" src="img/portfolio-3.jpg" alt="">
+                        <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center">
+                            <a href="img/portfolio-3.jpg" data-lightbox="portfolio">
+                                <i class="fa fa-plus text-white" style="font-size: 60px;"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4 portfolio-item">
+                    <div class="position-relative overflow-hidden mb-2">
+                        <img class="img-fluid rounded w-100" src="img/portfolio-4.jpg" alt="">
+                        <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center">
+                            <a href="img/portfolio-4.jpg" data-lightbox="portfolio">
+                                <i class="fa fa-plus text-white" style="font-size: 60px;"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4 portfolio-item">
+                    <div class="position-relative overflow-hidden mb-2">
+                        <img class="img-fluid rounded w-100" src="img/portfolio-5.jpg" alt="">
+                        <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center">
+                            <a href="img/portfolio-5.jpg" data-lightbox="portfolio">
+                                <i class="fa fa-plus text-white" style="font-size: 60px;"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4 portfolio-item">
+                    <div class="position-relative overflow-hidden mb-2">
+                        <img class="img-fluid rounded w-100" src="img/portfolio-6.jpg" alt="">
+                        <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center">
+                            <a href="img/portfolio-6.jpg" data-lightbox="portfolio">
+                                <i class="fa fa-plus text-white" style="font-size: 60px;"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>-->
+<!-- Portfolio End -->
+
+    <!-- Portfolio End -->
+
+
+    <!-- Testimonial Start -->
+    <!-- <div class="container-fluid py-5" id="testimonial">
+        <div class="container">
+            <div class="position-relative d-flex align-items-center justify-content-center">
+                <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">Review</h1>
+                <h1 class="position-absolute text-uppercase text-primary">Clients Say</h1>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="owl-carousel testimonial-carousel">
+                        <div class="text-center">
+                            <i class="fa fa-3x fa-quote-left text-primary mb-4"></i>
+                            <h4 class="font-weight-light mb-4">Dolor eirmod diam stet kasd sed. Aliqu rebum est eos. Rebum elitr dolore et eos labore, stet justo sed est sed. Diam sed sed dolor stet accusam amet eirmod eos, labore diam clita</h4>
+                            <img class="img-fluid rounded-circle mx-auto mb-3" src="img/testimonial-1.jpg" style="width: 80px; height: 80px;">
+                            <h5 class="font-weight-bold m-0">Client Name</h5>
+                            <span>Profession</span>
+                        </div>
+                        <div class="text-center">
+                            <i class="fa fa-3x fa-quote-left text-primary mb-4"></i>
+                            <h4 class="font-weight-light mb-4">Dolor eirmod diam stet kasd sed. Aliqu rebum est eos. Rebum elitr dolore et eos labore, stet justo sed est sed. Diam sed sed dolor stet accusam amet eirmod eos, labore diam clita</h4>
+                            <img class="img-fluid rounded-circle mx-auto mb-3" src="img/testimonial-2.jpg" style="width: 80px; height: 80px;">
+                            <h5 class="font-weight-bold m-0">Client Name</h5>
+                            <span>Profession</span>
+                        </div>
+                        <div class="text-center">
+                            <i class="fa fa-3x fa-quote-left text-primary mb-4"></i>
+                            <h4 class="font-weight-light mb-4">Dolor eirmod diam stet kasd sed. Aliqu rebum est eos. Rebum elitr dolore et eos labore, stet justo sed est sed. Diam sed sed dolor stet accusam amet eirmod eos, labore diam clita</h4>
+                            <img class="img-fluid rounded-circle mx-auto mb-3" src="img/testimonial-3.jpg" style="width: 80px; height: 80px;">
+                            <h5 class="font-weight-bold m-0">Client Name</h5>
+                            <span>Profession</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <!-- Testimonial End -->
+
+
+    <!-- Blog Start -->
+    <!-- <div class="container-fluid pt-5" id="blog">
+        <div class="container">
+            <div class="position-relative d-flex align-items-center justify-content-center">
+                <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">Blog</h1>
+                <h1 class="position-absolute text-uppercase text-primary">Latest Blog</h1>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 mb-5">
+                    <div class="position-relative mb-4">
+                        <img class="img-fluid rounded w-100" src="img/blog-1.jpg" alt="">
+                        <div class="blog-date">
+                            <h4 class="font-weight-bold mb-n1">01</h4>
+                            <small class="text-white text-uppercase">Jan</small>
+                        </div>
+                    </div>
+                    <h5 class="font-weight-medium mb-4">Rebum lorem no eos ut ipsum diam tempor sed rebum elitr ipsum</h5>
+                    <a class="btn btn-sm btn-outline-primary py-2" href="">Read More</a>
+                </div>
+                <div class="col-lg-4 mb-5">
+                    <div class="position-relative mb-4">
+                        <img class="img-fluid rounded w-100" src="img/blog-2.jpg" alt="">
+                        <div class="blog-date">
+                            <h4 class="font-weight-bold mb-n1">01</h4>
+                            <small class="text-white text-uppercase">Jan</small>
+                        </div>
+                    </div>
+                    <h5 class="font-weight-medium mb-4">Rebum lorem no eos ut ipsum diam tempor sed rebum elitr ipsum</h5>
+                    <a class="btn btn-sm btn-outline-primary py-2" href="">Read More</a>
+                </div>
+                <div class="col-lg-4 mb-5">
+                    <div class="position-relative mb-4">
+                        <img class="img-fluid rounded w-100" src="img/blog-3.jpg" alt="">
+                        <div class="blog-date">
+                            <h4 class="font-weight-bold mb-n1">01</h4>
+                            <small class="text-white text-uppercase">Jan</small>
+                        </div>
+                    </div>
+                    <h5 class="font-weight-medium mb-4">Rebum lorem no eos ut ipsum diam tempor sed rebum elitr ipsum</h5>
+                    <a class="btn btn-sm btn-outline-primary py-2" href="">Read More</a>
+                </div>
+            </div>
+        </div>
+    </div>-->
+    <!-- Blog End -->
+
+
+
+   <!-- Contact Start -->
+    <div class="container-fluid py-5" id="contact">
+        <div class="container">
+            <div class="position-relative d-flex align-items-center justify-content-center">
+                <h1 class="display-1 text-uppercase text-white en" style="-webkit-text-stroke: 1px #dee2e6;">Connect</h1>
+                <h1 class="display-1 text-uppercase text-white es" style="-webkit-text-stroke: 1px #dee2e6; display:none;">Hablemos</h1>
+                <h1 class="position-absolute text-uppercase text-primary en">Start a Project</h1>
+                <h1 class="position-absolute text-uppercase text-primary es" style="display:none;">Inicia un Proyecto</h1>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <h3 class="mb-4 en">Shall we create something together?</h3>
+                    <h3 class="mb-4 es" style="display:none;">¿Creamos algo juntos?</h3>
+                    <p class="en">If you have an idea or project in mind and believe I can help you, don't hesitate to get in touch!</p>
+                    <p class="es" style="display:none;">Si tienes una idea o proyecto en mente y crees que puedo ayudarte, ¡no dudes en ponerte en contacto!</p>
+                    <a href="mailto:eliorevillaperez@gmail.com?subject=New Project&body=Hello, I would like to discuss a new project."                     
+                    class="btn btn-primary en" style="font-size: 16px; padding: 10px 30px; width: 50%; margin: 0 auto; display: block;">Send me an email</a>
+
+                    <a href="mailto:eliorevillaperez@gmail.com?subject=Nuevo Proyecto&body=Hola, me gustaría discutir un nuevo proyecto." 
+                    class="btn btn-primary es" style="font-size: 16px; padding: 10px 30px; width: 50%; margin: 0 auto; display: block; display:none;">Envíame un correo</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Contact End -->
+
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-primary text-white mt-5 py-5 px-sm-3 px-md-5">
+        <div class="container text-center py-5">
+            <div class="d-flex justify-content-center mb-4">
+                <a class="btn btn-light btn-social mr-2" href="https://www.linkedin.com/in/elio-revilla-perez/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <a class="btn btn-light btn-social mr-2" href="https://github.com/ElioRevilla" target="_blank"><i class="fab fa-github"></i></a>
+                <a class="btn btn-light btn-social" href="mailto:eliorevillaperez@gmail.com?subject=Contact&body=Hello, I would like to get in touch with you." target="_blank"><i class="fas fa-envelope"></i></a>
+            </div>
+            <div class="d-flex justify-content-center mb-3">
+                <a class="text-white" href="#">Privacy</a>
+                <span class="px-3">|</span>
+                <a class="text-white" href="#">Terms</a>
+                <span class="px-3">|</span>
+                <a class="text-white" href="#">FAQs</a>
+                <span class="px-3">|</span>
+                <a class="text-white" href="#">Help</a>
+            </div>
+            <p class="m-0">
+                &copy; <a class="text-white font-weight-bold" href="#">Elio Revilla</a>. All Rights Reserved. 
+                Custom Design by <a class="text-white font-weight-bold" href="https://www.linkedin.com/in/eliorevillaperez/" target="_blank">Elio Revilla</a>. 
+                Template by <a class="text-white font-weight-bold" href="https://htmlcodex.com" target="_blank">HTML Codex</a>.
+            </p>
+            
+        </div>
+    </div>
+    <!-- Footer End -->
+
+    <!-- Scroll to Bottom -->
+    <i class="fa fa-2x fa-angle-down text-white scroll-to-bottom"></i>
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-outline-dark px-0 back-to-top"><i class="fa fa-angle-double-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/typed/typed.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+    <!-- Contact Javascript File -->
+    <script src="mail/jqBootstrapValidation.min.js"></script>
+    <script src="mail/contact.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+
+    <!-- Language Switch Script -->
+    <script>
+        function showSpanish() {
+        document.querySelectorAll('.es').forEach(el => {
+            el.style.display = 'block';
+            if (el.tagName === 'IMG') {
+                el.src = el.src.split('?')[0] + '?t=' + new Date().getTime();
+            }
+            el.offsetHeight; // Forzar reflow
+        });
+        document.querySelectorAll('.en').forEach(el => el.style.display = 'none');
+        }
+
+        function showEnglish() {
+            document.querySelectorAll('.en').forEach(el => {
+                el.style.display = 'block';
+                if (el.tagName === 'IMG') {
+                    el.src = el.src.split('?')[0] + '?t=' + new Date().getTime();
+                }
+                el.offsetHeight; // Forzar reflow
+            });
+            document.querySelectorAll('.es').forEach(el => el.style.display = 'none');
+        }
+
+        // Opcional: Define idioma por defecto
+        showSpanish(); // Cambia a showSpanish() para tener español por defecto
+    </script>
+    
 </body>
+
 </html>
