@@ -103,41 +103,51 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
+    <!-- Hero + About Section (combined) -->
     <section id="home" class="min-h-screen flex items-center justify-center relative overflow-hidden">
         <!-- Background gradient -->
         <div class="absolute inset-0 bg-gradient-to-br from-dark-950 via-dark-900 to-dark-950"></div>
         <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-primary/10 via-transparent to-transparent"></div>
 
-        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-            <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
-                <!-- Profile Image -->
-                <div class="flex-shrink-0 animate-on-scroll">
-                    <div class="relative">
-                        <div class="w-64 h-64 sm:w-80 sm:h-80 rounded-full overflow-hidden border-4 border-primary/30 shadow-2xl shadow-primary/20">
-                            <img src="img/elio_revilla.jpg" alt="Elio Revilla" class="w-full h-full object-cover">
+        <!-- Neural Network Canvas -->
+        <canvas id="hero-canvas" class="absolute inset-0 w-full h-full" style="z-index:1"></canvas>
+
+        <div class="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+
+                <!-- LEFT CARD: Hero -->
+                <div class="rounded-2xl border border-white/10 bg-dark-900/60 backdrop-blur-sm p-8 sm:p-10 flex flex-col justify-between lg:min-h-[420px] animate-on-scroll">
+                    <!-- Top: photo + name -->
+                    <div>
+                        <!-- Profile Image (smaller) -->
+                        <div class="mb-6">
+                            <div class="relative w-24 h-24 sm:w-28 sm:h-28">
+                                <div class="w-full h-full rounded-full overflow-hidden border-2 border-primary/40 shadow-lg shadow-primary/20">
+                                    <img src="img/elio_revilla.jpg" alt="Elio Revilla" class="w-full h-full object-cover">
+                                </div>
+                                <div class="absolute -inset-2 rounded-full border border-primary/20 animate-pulse"></div>
+                            </div>
                         </div>
-                        <div class="absolute -inset-4 rounded-full border border-primary/20 animate-pulse"></div>
+
+                        <!-- Label -->
+                        <p class="text-primary text-xs font-semibold uppercase tracking-widest mb-3">
+                            <span class="lang-en">I'm</span>
+                            <span class="lang-es">Soy</span>
+                        </p>
+
+                        <!-- Name -->
+                        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black text-white mb-4 tracking-tight leading-none">
+                            Elio <span class="text-primary">Revilla</span>
+                        </h1>
+
+                        <!-- Typing Animation -->
+                        <div class="h-8 mb-8">
+                            <span id="typing-text" class="text-lg sm:text-xl text-gray-300 typing-text"></span>
+                        </div>
                     </div>
-                </div>
 
-                <!-- Hero Content -->
-                <div class="text-center lg:text-left animate-on-scroll animation-delay-200">
-                    <p class="text-gray-400 text-lg mb-2">
-                        <span class="lang-en">I'm</span>
-                        <span class="lang-es">Soy</span>
-                    </p>
-                    <h1 class="text-5xl sm:text-6xl lg:text-7xl font-black text-white mb-4 tracking-tight">
-                        Elio <span class="text-primary">Revilla</span>
-                    </h1>
-
-                    <!-- Typing Animation -->
-                    <div class="h-10 mb-8">
-                        <span id="typing-text" class="text-xl sm:text-2xl text-gray-300 typing-text"></span>
-                    </div>
-
-                    <!-- CTA Buttons -->
-                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+                    <!-- Bottom: Buttons -->
+                    <div class="flex flex-col sm:flex-row items-start gap-3">
                         <a href="https://www.linkedin.com/in/elio-revilla-perez/" target="_blank" class="btn-primary glow-hover">
                             <i class="fab fa-linkedin"></i>
                             LinkedIn
@@ -149,45 +159,41 @@
                         </a>
                     </div>
                 </div>
+
+                <!-- RIGHT CARD: About -->
+                <div id="about" class="rounded-2xl border border-white/10 bg-dark-800/40 backdrop-blur-sm p-8 sm:p-10 flex flex-col justify-between lg:min-h-[420px] animate-on-scroll animation-delay-200">
+                    <div>
+                        <!-- Label -->
+                        <p class="text-primary text-xs font-semibold uppercase tracking-widest mb-4">
+                            <span class="lang-en">About Me</span>
+                            <span class="lang-es">Sobre Mí</span>
+                        </p>
+
+                        <!-- Title -->
+                        <h2 class="text-xl sm:text-2xl font-bold text-white mb-5">
+                            <span class="lang-en">Machine Learning Engineer & Data Scientist</span>
+                            <span class="lang-es">Ingeniero de Machine Learning & Científico de Datos</span>
+                        </h2>
+
+                        <!-- Bio -->
+                        <p class="text-gray-400 leading-relaxed text-sm sm:text-base lang-en">
+                            I am an electronic engineer passionate about data science, Artificial Intelligence (AI), and Industrial IoT. With extensive experience in AI projects and data analysis in industrial environments, I am currently pursuing a master's degree in AI. My background includes developing models with TensorFlow, Keras and PyTorch, deploying solutions on GCP and Azure, and leading AI & IoT projects in industrial settings.
+                        </p>
+                        <p class="text-gray-400 leading-relaxed text-sm sm:text-base lang-es">
+                            Soy un ingeniero electrónico apasionado por la ciencia de datos, la Inteligencia Artificial (IA) y el IIoT industrial. Con amplia experiencia en proyectos de IA y análisis de datos en entornos industriales, actualmente curso una maestría en IA. Mi experiencia incluye el desarrollo de modelos con TensorFlow, Keras y PyTorch, despliegue en GCP y Azure, y dirección de proyectos de IA e IoT en entornos industriales.
+                        </p>
+                    </div>
+
+                </div>
+
             </div>
         </div>
 
         <!-- Scroll indicator -->
         <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-            <a href="#about" class="text-gray-500 hover:text-primary transition-colors">
+            <a href="#skills" class="text-gray-500 hover:text-primary transition-colors">
                 <i class="fas fa-chevron-down text-2xl"></i>
             </a>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="py-20 lg:py-32">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <!-- Section Title -->
-            <div class="section-title animate-on-scroll">
-                <h2 class="section-title-bg">
-                    <span class="lang-en">About</span>
-                    <span class="lang-es">Sobre Mi</span>
-                </h2>
-                <h3 class="section-title-main">
-                    <span class="lang-en">About Me</span>
-                    <span class="lang-es">Sobre Mi</span>
-                </h3>
-            </div>
-
-            <!-- Content -->
-            <div class="max-w-4xl mx-auto animate-on-scroll">
-                <h4 class="text-2xl sm:text-3xl font-bold text-white mb-6 text-center">
-                    <span class="lang-en">Machine Learning Engineer & Data Scientist</span>
-                    <span class="lang-es">Ingeniero de Machine Learning & Cientifico de Datos</span>
-                </h4>
-                <p class="text-lg text-gray-400 leading-relaxed text-center lang-en">
-                    I am an electronic engineer passionate about data science, Artificial Intelligence (AI), and Industrial IoT (IIoT). With extensive experience in AI projects and data analysis in industrial environments, I am currently pursuing a master's degree in Artificial Intelligence. My professional background includes developing AI models using TensorFlow, Keras, and PyTorch, deploying solutions on GCP and Azure, and leading AI and IoT projects in industrial settings.
-                </p>
-                <p class="text-lg text-gray-400 leading-relaxed text-center lang-es">
-                    Soy un ingeniero electronico apasionado por la ciencia de datos, la Inteligencia Artificial (IA) y el IIoT industrial. Con amplia experiencia en proyectos de IA y analisis de datos en entornos industriales, actualmente estoy cursando una maestria en Inteligencia Artificial. Mi experiencia profesional incluye el desarrollo de modelos de IA utilizando TensorFlow, Keras y PyTorch, el despliegue de soluciones en GCP y Azure, y la direccion de proyectos de IA e IoT en entornos industriales.
-                </p>
-            </div>
         </div>
     </section>
 
@@ -363,6 +369,10 @@
                         <div class="flex flex-col items-center gap-2">
                             <img src="img/pandas-icon.svg" alt="Pandas" class="skill-icon">
                             <span class="text-xs text-gray-400">Pandas</span>
+                        </div>
+                        <div class="flex flex-col items-center gap-2">
+                            <img src="img/githubactions-icon.svg" alt="GitHub Actions" class="skill-icon">
+                            <span class="text-xs text-gray-400">GH Actions</span>
                         </div>
                     </div>
                 </div>

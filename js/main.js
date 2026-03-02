@@ -340,6 +340,90 @@
     };
 
     // ==========================================
+    // Neural Network Canvas Animation
+    // ==========================================
+    const NeuralNetworkAnimation = {
+        canvas: null,
+        ctx: null,
+        particles: [],
+        animationId: null,
+        MAX_DIST: 130,
+
+        init() {
+            this.canvas = document.getElementById('hero-canvas');
+            if (!this.canvas) return;
+            this.ctx = this.canvas.getContext('2d');
+            this.resize();
+            this.createParticles();
+            this.animate();
+            window.addEventListener('resize', () => {
+                this.resize();
+                this.createParticles();
+            });
+        },
+
+        resize() {
+            const hero = document.getElementById('home');
+            this.canvas.width = hero.offsetWidth;
+            this.canvas.height = hero.offsetHeight;
+        },
+
+        particleCount() {
+            return window.innerWidth < 768 ? 35 : 75;
+        },
+
+        createParticles() {
+            this.particles = [];
+            const count = this.particleCount();
+            for (let i = 0; i < count; i++) {
+                this.particles.push({
+                    x: Math.random() * this.canvas.width,
+                    y: Math.random() * this.canvas.height,
+                    vx: (Math.random() - 0.5) * 0.4,
+                    vy: (Math.random() - 0.5) * 0.4,
+                    radius: Math.random() * 1.5 + 1
+                });
+            }
+        },
+
+        animate() {
+            this.animationId = requestAnimationFrame(() => this.animate());
+            this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
+
+            // Update and draw particles
+            this.particles.forEach(p => {
+                p.x += p.vx;
+                p.y += p.vy;
+                if (p.x < 0 || p.x > this.canvas.width)  p.vx *= -1;
+                if (p.y < 0 || p.y > this.canvas.height) p.vy *= -1;
+
+                this.ctx.beginPath();
+                this.ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+                this.ctx.fillStyle = 'rgba(11, 206, 175, 0.55)';
+                this.ctx.fill();
+            });
+
+            // Draw connections
+            for (let i = 0; i < this.particles.length; i++) {
+                for (let j = i + 1; j < this.particles.length; j++) {
+                    const dx = this.particles[i].x - this.particles[j].x;
+                    const dy = this.particles[i].y - this.particles[j].y;
+                    const dist = Math.sqrt(dx * dx + dy * dy);
+                    if (dist < this.MAX_DIST) {
+                        const opacity = (1 - dist / this.MAX_DIST) * 0.25;
+                        this.ctx.beginPath();
+                        this.ctx.moveTo(this.particles[i].x, this.particles[i].y);
+                        this.ctx.lineTo(this.particles[j].x, this.particles[j].y);
+                        this.ctx.strokeStyle = `rgba(11, 206, 175, ${opacity})`;
+                        this.ctx.lineWidth = 0.6;
+                        this.ctx.stroke();
+                    }
+                }
+            }
+        }
+    };
+
+    // ==========================================
     // Initialize Everything
     // ==========================================
     function init() {
@@ -352,6 +436,7 @@
         NavbarEffect.init();
         SmoothScroll.init();
         FooterYear.init();
+        NeuralNetworkAnimation.init();
 
         // Make first section visible immediately
         document.querySelectorAll('#home .animate-on-scroll').forEach(el => {
