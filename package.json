@@ -1,0 +1,16 @@
+{
+  "name": "portfolio-elio-revilla",
+  "version": "2.0.0",
+  "description": "Personal portfolio website for Elio Revilla - AI Engineer & Data Scientist",
+  "scripts": {
+    "build": "npx tailwindcss -i ./src/input.css -o ./dist/output.css",
+    "watch": "npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch",
+    "build:minify": "npx tailwindcss -i ./src/input.css -o ./dist/output.css --minify"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.1"
+  },
+  "keywords": ["portfolio", "ai", "machine-learning", "data-science"],
+  "author": "Elio Revilla",
+  "license": "MIT"
+}
