@@ -22,6 +22,24 @@
 
     <!-- Tailwind CSS -->
     <link href="dist/output.css" rel="stylesheet">
+
+    <style>
+        .skill-icon-wrapper {
+            width: 3rem;
+            height: 3rem;
+            border-radius: 0.5rem;
+            background-color: #1e1e1e;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.5rem;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .skill-icon-wrapper:hover {
+            transform: scale(1.1);
+            background-color: hsla(0, 0%, 100%, 0.2);
+        }
+    </style>
 </head>
 
 <body class="bg-dark-950 text-gray-200">
@@ -177,10 +195,10 @@
 
                         <!-- Bio -->
                         <p class="text-gray-400 leading-relaxed text-sm sm:text-base lang-en">
-                            I am an electronic engineer passionate about data science, Artificial Intelligence (AI), and Industrial IoT. With extensive experience in AI projects and data analysis in industrial environments, I am currently pursuing a master's degree in AI. My background includes developing models with TensorFlow, Keras and PyTorch, deploying solutions on GCP and Azure, and leading AI & IoT projects in industrial settings.
+                            I am an electronic engineer passionate about data science, Artificial Intelligence (AI), and Industrial IoT. With extensive experience in AI projects and data analysis in industrial environments, I hold a master's degree in AI. My background includes developing models with TensorFlow, Keras and PyTorch, deploying solutions on GCP and Azure, and leading AI & IoT projects in industrial settings.
                         </p>
                         <p class="text-gray-400 leading-relaxed text-sm sm:text-base lang-es">
-                            Soy un ingeniero electrónico apasionado por la ciencia de datos, la Inteligencia Artificial (IA) y el IIoT industrial. Con amplia experiencia en proyectos de IA y análisis de datos en entornos industriales, actualmente curso una maestría en IA. Mi experiencia incluye el desarrollo de modelos con TensorFlow, Keras y PyTorch, despliegue en GCP y Azure, y dirección de proyectos de IA e IoT en entornos industriales.
+                            Soy un ingeniero electrónico apasionado por la ciencia de datos, la Inteligencia Artificial (IA) y el IIoT industrial. Con amplia experiencia en proyectos de IA y análisis de datos en entornos industriales, cuento con una maestría en IA. Mi experiencia incluye el desarrollo de modelos con TensorFlow, Keras y PyTorch, despliegue en GCP y Azure, y dirección de proyectos de IA e IoT en entornos industriales.
                         </p>
                     </div>
 
@@ -373,6 +391,24 @@
                         <div class="flex flex-col items-center gap-2">
                             <img src="img/githubactions-icon.svg" alt="GitHub Actions" class="skill-icon">
                             <span class="text-xs text-gray-400">GH Actions</span>
+                        </div>
+                        <div class="flex flex-col items-center gap-2">
+                            <div class="skill-icon-wrapper">
+                                <img src="img/flask-icon.svg" alt="Flask" style="width:100%;height:100%;object-fit:contain;filter:invert(1);">
+                            </div>
+                            <span class="text-xs text-gray-400">Flask</span>
+                        </div>
+                        <div class="flex flex-col items-center gap-2">
+                            <div class="skill-icon-wrapper">
+                                <img src="img/fastapi-icon.svg" alt="FastAPI" style="width:100%;height:100%;object-fit:contain;">
+                            </div>
+                            <span class="text-xs text-gray-400">FastAPI</span>
+                        </div>
+                        <div class="flex flex-col items-center gap-2">
+                            <div class="skill-icon-wrapper">
+                                <img src="img/pytest-icon.svg" alt="pytest" style="width:100%;height:100%;object-fit:contain;">
+                            </div>
+                            <span class="text-xs text-gray-400">pytest</span>
                         </div>
                     </div>
                 </div>
@@ -661,6 +697,40 @@
                             <span class="project-tag">Keras</span>
                             <span class="project-tag">OpenCV</span>
                         </div>
+                    </div>
+                </div>
+
+                <!-- Project 12: SBS Educational Assistant -->
+                <div class="project-card animate-on-scroll animation-delay-200">
+                    <div class="relative aspect-video flex items-center justify-center" style="background: linear-gradient(to bottom right, rgba(139,92,246,0.2), #383838);">
+                        <i class="fas fa-graduation-cap text-6xl" style="color: rgba(139,92,246,0.5);"></i>
+                        <div class="project-card-overlay"></div>
+                    </div>
+                    <div class="p-6">
+                        <h4 class="text-lg font-bold text-white mb-2">
+                            <span class="lang-en">SBS Educational Assistant</span>
+                            <span class="lang-es">Asistente Educativo SBS</span>
+                        </h4>
+                        <p class="text-gray-400 text-sm mb-4">
+                            <span class="lang-en">AI-powered educational assistant that helps university students understand banking and financial regulation through an interactive chat with two modes: explain concepts and generate practical examples. Built with clean architecture, hybrid RAG, and CI/CD to Cloud Run.</span>
+                            <span class="lang-es">Asistente educativo con IA que ayuda a estudiantes universitarios a comprender regulacion bancaria y financiera mediante un chat interactivo con dos modos: explicar conceptos y generar ejemplos practicos. Construido con arquitectura limpia, RAG hibrido y CI/CD hacia Cloud Run.</span>
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="project-tag">FastAPI</span>
+                            <span class="project-tag">RAG</span>
+                            <span class="project-tag">pgvector</span>
+                            <span class="project-tag">Vertex AI</span>
+                            <span class="project-tag">Gemini</span>
+                            <span class="project-tag">React</span>
+                            <span class="project-tag">Firebase</span>
+                            <span class="project-tag">Cloud Run</span>
+                            <span class="project-tag">GitHub Actions</span>
+                        </div>
+                        <a href="https://sbs-assistant-web-578607935536.us-central1.run.app" target="_blank" class="inline-flex items-center gap-2 text-primary hover:text-primary-400 transition-colors text-sm">
+                            <i class="fas fa-external-link-alt"></i>
+                            <span class="lang-en">Live Demo</span>
+                            <span class="lang-es">Demo en vivo</span>
+                        </a>
                     </div>
                 </div>
             </div>
